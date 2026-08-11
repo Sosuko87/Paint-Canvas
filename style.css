@@ -1,28 +1,46 @@
-/*標準フォント指定*/
+/* 1. すべての要素の不要な余白を完全にリセット（一番上に記述） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 標準フォント指定 */
 @font-face {
   font-family: "mainFont";
   src: url("main.woff2") format("woff2");
 }
 
-/* 頑固なボタンなどのパーツも含めて一括指定 */
-body {
-  font-family: "mainFont";
+/* 画面全体のベース */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 横スクロールバーの発生を防ぐ */
 }
 
-.btn {
-  /* 1. ボタンの形と配置のベース */
-  display: inline-block;
-  text-decoration: none; /* リンクの下線を消す */
+body {
   font-family: "mainFont";
-  
-  /* 2. サイズと余白 */
-  padding: 12px 24px;    /* 内側の余白（上下 12px、左右 24px） */
-  
-  /* 3. 色と見た目 */
-  background-color: #04ff00; /* ボタンの背景色（青） */
-  color: #ffffff;            /* 文字の色（白） */
-  border-radius: 4px;        /* 角を少し丸くする */ 
-  
-  /* 4. アニメーションの準備 */
-  transition: 0.3s;          /* 色の変化を0.3秒かけて滑らかにする */
+  background-color: #f0f0f0;
+}
+
+/* 黒い直方体（バナー） */
+.banner {
+  display: flex;
+  height: 100px;
+  background-color: #0011ff;
+  box-sizing: border-box;
+  font-family: "mainFont";
+  font-size: 36px;
+  color: #ffffff;
+}
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "mainFont";
+  padding: 12px 24px;
+  background-color: #0095ff;
+  color: #000000;    /* 見やすいように文字色を黒にしています */
+  border-radius: 4px;
+  transition: 0.3s;
 }
