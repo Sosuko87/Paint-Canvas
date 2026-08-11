@@ -1,2 +1,2 @@
-# SukuSamune
+# Paint Canvasーペイントキャンバス
 スクサムネのコードです。
