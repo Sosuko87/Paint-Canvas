@@ -16,6 +16,12 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* 横スクロールバーの発生を防ぐ */
 }
+.form-group {
+  display: flex;
+  flex-direction: column; /* 要素を縦並びにする */
+  
+  gap: 15px; /* ★ここを変えるだけで、縦の隙間を自由にコントロールできます！ */
+}
 
 body {
   font-family: "mainFont";
@@ -66,7 +72,9 @@ body {
   width: 250px;
   height: 400px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
+/* ファイル選択ボタンのスタイル */
 .font {
   padding: 10px;
   font-family: "mainFont";
@@ -74,10 +82,12 @@ body {
   color: #ffffff;
   line-height: 1.5;
   margin: 10px;
+  flex-direction: column;
 }
 /* 新しい自由なスタイリングモードを有効化 */
 select, ::picker(select) {
   appearance: base-select;
+  padding: 5px;  
 }
 
 /* optionごとのデザインを自由に変更 */
@@ -95,19 +105,21 @@ option:hover {
   border-radius: 4px;         /* 数値を大きくするほど、外側の四隅が丸くなります */
   border: 1px solid #f4f4f4;      /* 外枠の線（不要なら none にしてください） */
   overflow: hidden;
-  margin: 10px;            /* ［重要］中身が丸い枠からはみ出さないようにするお守り */
+          
 }
-
-
 .font-dropdown {
-  padding: 10px;
   font-family: "mainFont";
   font-size: 16px;
   background-color: #f7f7f7;
   color: #000000;
 }
+
+
+/* ファイル選択ボタンのスタイル */
 input[type="file"]::file-selector-button {
+  margin-top: 10px;
   background-color: #007bff;
+  display: block;
   font-family: "mainFont";
   color: #fff;
   padding: 8px 16px;
@@ -119,4 +131,27 @@ input[type="file"] {
   display: block;
   font-family: "mainFont";
   font-size: 14px;
+}
+
+.mojieffect {
+  margin-top: 20px;
+  font-family: "mainFont";
+  font-size: 17px;
+  color: #ffffff;
+  line-height: 1.5;
+  flex-direction: column;
+}
+.moji-btn {
+  width: fit-content;
+  height: auto;
+  margin-top: 10px;
+  background-color: #f8f8f8;
+  display: block;
+  font-family: "mainFont";
+  color: #000000;
+  padding: 8px 16px;
+  border: solid 3px #ff8c00;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
 }
