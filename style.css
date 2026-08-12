@@ -90,10 +90,9 @@ select, ::picker(select) {
   padding: 5px;  
 }
 
-/* optionごとのデザインを自由に変更 */
 option {
   cursor: pointer;
-  background-color: #f0f8ff;
+  background-color: #ffffff;
   padding: 10px;
   border-radius: 4px;
 }
@@ -102,10 +101,24 @@ option:hover {
   color: white;
 }
 ::picker(select) {
-  border-radius: 4px;         /* 数値を大きくするほど、外側の四隅が丸くなります */
-  border: 1px solid #f4f4f4;      /* 外枠の線（不要なら none にしてください） */
+  border-radius: 4px;
+  border: 1px solid #f4f4f4;
   overflow: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s allow-discrete, overlay 0.3s allow-discrete;
+  opacity: 0;
+  transform: translateY(-10px); 
           
+}
+::picker(select):popover-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@starting-style {
+  ::picker(select):popover-open {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 .font-dropdown {
   font-family: "mainFont";
@@ -156,4 +169,8 @@ input[type="file"] {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  transition: border-color 0.2s ease; 
+}
+.moji-btn:hover {
+  border-color: #ffd187;
 }
