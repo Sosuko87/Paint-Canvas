@@ -68,8 +68,7 @@ body {
 }
 .scrollbox {
   background-color: #141414;
-  position: relative;
-  width: 240px;
+  width: 100px;
   height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -173,4 +172,19 @@ input[type="file"] {
 }
 .moji-btn:hover {
   border-color: #ffd187;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  color: #000000;
+  height: 8px;
+  /* スタイル調整 */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #efafda;
+  height: 8px;
+  border-radius: 8px;
 }
