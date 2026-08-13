@@ -68,7 +68,7 @@ body {
 }
 .scrollbox {
   background-color: #141414;
-  width: 100px;
+  width: 240px;
   height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
