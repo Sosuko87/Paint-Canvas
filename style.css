@@ -179,12 +179,10 @@ input[type="range"] {
   appearance: none;
   background: transparent;
   color: #000000;
-  height: 8px;
   /* スタイル調整 */
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: #efafda;
-  height: 8px;
+  background: #ffffff;
   border-radius: 8px;
 }
