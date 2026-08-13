@@ -1,2 +1,2 @@
 # Paint Canvasーペイントキャンバス
-スクサムネのコードです。
+Paint Canvasのコードです。
